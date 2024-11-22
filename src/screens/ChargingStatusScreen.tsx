@@ -3,9 +3,8 @@ import { View, StyleSheet, FlatList, Text, Button } from 'react-native';
 import ChargingStatusCard from '../components/ChargingStatusCard';
 import { useNavigation } from '@react-navigation/native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../navigation/AppNavigator'; // Importando o tipo RootStackParamList
+import { RootStackParamList } from '../navigation/AppNavigator'; 
 
-// Tipando o navigation com o tipo correto
 type ChargingStatusScreenNavigationProp = StackNavigationProp<RootStackParamList, 'ChargingStatusScreen'>;
 
 const initialChargingStatuses = [
@@ -16,7 +15,7 @@ const initialChargingStatuses = [
 
 const ChargingStatusScreen: React.FC = () => {
   const [chargingStatuses, setChargingStatuses] = useState(initialChargingStatuses);
-  const navigation = useNavigation<ChargingStatusScreenNavigationProp>(); // Aplicando o tipo no navigation
+  const navigation = useNavigation<ChargingStatusScreenNavigationProp>(); 
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,7 +32,7 @@ const ChargingStatusScreen: React.FC = () => {
 
   // Função de navegação para EnergyPreferencesScreen
   const navigateToPreferences = () => {
-    navigation.navigate('EnergyPreferencesScreen'); // Navegando para a tela de preferências
+    navigation.navigate('EnergyPreferencesScreen');
   };
 
   return (

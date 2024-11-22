@@ -20,9 +20,9 @@ const EnergyPreferencesScreen: React.FC = () => {
 
   // Estado para armazenar preferências de carregamento
   const [preferences, setPreferences] = useState({
-    renewablePriority: true,  // Priorizar fontes renováveis
-    lowDemandOnly: false,     // Carregar apenas em horários de menor demanda
-    preferredTime: '22:00',   // Hora preferencial de carregamento
+    renewablePriority: true,  
+    lowDemandOnly: false,     
+    preferredTime: '22:00',   
   });
 
   // Função para navegar de volta
@@ -34,8 +34,8 @@ const EnergyPreferencesScreen: React.FC = () => {
   const adjustPreferences = () => {
     setPreferences((prevPreferences) => ({
       ...prevPreferences,
-      renewablePriority: !prevPreferences.renewablePriority,  // Inverte a prioridade renovável
-      lowDemandOnly: !prevPreferences.lowDemandOnly,          // Inverte o carregamento em horários de menor demanda
+      renewablePriority: !prevPreferences.renewablePriority,
+      lowDemandOnly: !prevPreferences.lowDemandOnly,         
     }));
   };
 
